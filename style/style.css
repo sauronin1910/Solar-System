@@ -64,7 +64,7 @@
     top: 50%;
     transform: translateY(-50%);
     animation: rotate 5s linear infinite,
-        earth 14s infinite ease-in-out;
+        earth 9.5s infinite ease-in-out;
     position: relative;
     z-index: 7;
 }
@@ -98,7 +98,7 @@
     top: 40%;
     transform: translateY(-50%);
     animation: rotate 5s linear infinite,
-        moon 14s infinite ease-in-out;
+        moon 9.5s infinite ease-in-out;
     position: relative;
     z-index: 9;
 }
