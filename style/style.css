@@ -72,23 +72,6 @@
 
 
 
-
-/* .earth1 {
-    background: url(../img/earth.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
-    width: 20px;
-    height: 20px;
-    left: -80px;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: rotate 5s linear infinite,
-        earth1 15s infinite ease-in-out;
-    position: absolute;
-    z-index: 11;
-} */
-
-
-
 .moon {
     background: url(../img/moon.jpg);
     box-shadow: inset -2px -2px 2px #000, -0.3px -0.3px 0.3px #ccc;
