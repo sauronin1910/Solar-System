@@ -35,6 +35,7 @@
     animation: rotate 3s linear infinite,
         mercury 5s infinite ease-in-out;
     position: relative;
+    z-index: 1;
 
 }
 
@@ -49,9 +50,12 @@
     animation: rotate 8s linear infinite,
         venus 8s infinite ease-in-out;
     position: relative;
+    z-index: 2;
 }
 
+
 .earth {
+
     background: url(../img/earth.jpg);
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 20px;
@@ -60,10 +64,28 @@
     top: 50%;
     transform: translateY(-50%);
     animation: rotate 5s linear infinite,
-        earth 15s infinite ease-in-out;
+        earth 14s infinite ease-in-out;
     position: relative;
-
+    z-index: 7;
 }
+
+
+
+
+
+/* .earth1 {
+    background: url(../img/earth.jpg);
+    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    width: 20px;
+    height: 20px;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite,
+        earth1 15s infinite ease-in-out;
+    position: absolute;
+    z-index: 11;
+} */
 
 
 
@@ -72,13 +94,16 @@
     box-shadow: inset -2px -2px 2px #000, -0.3px -0.3px 0.3px #ccc;
     width: 6px;
     height: 6px;
-    left: -10px;
-    top: 50%;
+    left: -90px;
+    top: 40%;
     transform: translateY(-50%);
-    animation: satellite 5s linear infinite,
-        moon 2s infinite ease-in-out;
+    animation: rotate 5s linear infinite,
+        moon 14s infinite ease-in-out;
     position: relative;
+    z-index: 9;
 }
+
+
 
 .venus,
 .sun,
@@ -105,11 +130,19 @@
 @keyframes earth {
     49% {
 
-        z-index: 2;
+        z-index: -1;
     }
 
     50% {
         left: 280px;
+        z-index: -11;
+    }
+
+    55% {
+        z-index: 11;
+    }
+
+    67% {
         z-index: -1;
     }
 
@@ -119,28 +152,36 @@
 
     100% {
         left: -80px;
-        z-index: 2;
+        z-index: -1;
     }
 
 }
 
+
+
 @keyframes moon {
     49% {
+
         z-index: 10;
     }
 
     50% {
-        left: 25px;
-        z-index: -22;
+
+        left: 300px;
+        z-index: -1;
+    }
+
+    67% {
+        z-index: -10;
     }
 
     99% {
-        z-index: -22;
+        z-index: -1;
     }
 
     100% {
-        left: -10px;
-        z-index: 10;
+        left: 9x;
+        z-index: -10;
     }
 
 }
@@ -176,11 +217,11 @@
 
     50% {
         left: 240px;
-        z-index: -1;
+        z-index: -2;
     }
 
     99% {
-        z-index: -1;
+        z-index: -2;
     }
 
     100% {
