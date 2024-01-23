@@ -80,7 +80,7 @@
     position: relative;
     transform-style: preserve-3d;
     animation: orbit 1s linear infinite, moon 10s linear infinite;
-    top: 37px;
+    top: 7px;
     left: 0;
 
 }
@@ -197,11 +197,11 @@
 
 @keyframes orbit {
     0% {
-        transform: perspective(1000px) rotateY(0) rotateX(0deg) translateY(-30px);
+        transform: perspective(1000px) rotateY(0) rotateX(0deg);
     }
 
 
     100% {
-        transform: perspective(1000px) rotateY(360deg) rotateX(0deg) translateY(-30px);
+        transform: perspective(1000px) rotateY(360deg) rotateX(0deg);
     }
 }
