@@ -24,7 +24,8 @@
 
 .mercury {
     background: url(../img/mercury.jpg);
-    box-shadow: inset -3px -3px 3px #000, -1px -1px 1px #ccc;
+
+    box-shadow: inset 4px -1px 3px #000, 1px 0px 1px #ccc;
     width: 13px;
     height: 13px;
     left: -65px;
@@ -39,7 +40,8 @@
 
 .venus {
     background: url(../img/venux.jpg);
-    box-shadow: inset -4px -4px 4px #000, -1px -1px 1px #ccc;
+
+    box-shadow: inset 4px 0px 4px #000, 1px 0px 1px #ccc;
     width: 13px;
     height: 13px;
     left: -90px;
@@ -55,7 +57,8 @@
 .earth {
 
     background: url(../img/earth.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    box-shadow: inset 4px -2px 8px #000, 1px 0px 1px #ccc;
+
     width: 20px;
     height: 20px;
     left: -130px;
@@ -92,7 +95,8 @@
 
 .mars {
     background: url(../img/mars.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    box-shadow: inset 4px 2px 8px #000, 1px 0px 1px #ccc;
+
     width: 18px;
     height: 18px;
     left: -180px;
@@ -107,10 +111,11 @@
 
 .jupiter {
     background: url(../img/jupiter.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    box-shadow: inset 12px 0px 8px #000, 3px 0px 1px #ccc;
+
     width: 68px;
     height: 68px;
-    left: -250px;
+    left: -270px;
     top: 65%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
@@ -120,27 +125,66 @@
     transform-style: preserve-3d;
 }
 
+.satellites {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: orbit 10s linear infinite, moon 10s linear infinite;
+    top: 7px;
+    left: 0;
+}
+
+.satellites img {
+    box-shadow: inset -2px -2px 2px #000, -0.3px -0.3px 0.3px #ccc;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(15px);
+    border-radius: 50%;
+
+}
+
+
+
+
 .saturn {
     background: url(../img/saturn.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    box-shadow: inset 9px -4px 8px #000, 2px 1px 1px #ccc;
     width: 48px;
     height: 48px;
-    left: -295px;
+    left: -320px;
     top: 45%;
-    transform: translateY(-55%);
+    transform: translateY(-55%) rotate(40deg);
     animation: rotate 14s linear infinite,
-        saturn 39.5s infinite ease-in-out;
+        saturn 39.5s infinite ease-in-out,
+        ring 20s linear infinite;
     position: absolute;
     z-index: 10;
     transform-style: preserve-3d;
 }
 
+.saturn::before {
+    content: "";
+    background: url(../img/rings2.jpg);
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: -34px;
+    transform: rotate(30deg);
+    width: 110px;
+    height: 2px;
+
+    border-radius: 50%;
+    animation: rotate 17s linear infinite,
+        ring 45s linear infinite;
+}
+
 .uranus {
     background: url(../img/uranus.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    box-shadow: inset 6px 2px 8px #000, 2px 1px 1px #ccc;
     width: 24px;
     height: 24px;
-    left: -330px;
+    left: -360px;
     top: 35%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
@@ -152,10 +196,11 @@
 
 .neptune {
     background: url(../img/neptune.jpg);
-    box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+    box-shadow: inset 7px -4px 8px #000, 1px -2px 1px #ccc;
+
     width: 24px;
     height: 24px;
-    left: -370px;
+    left: -390px;
     top: 75%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
@@ -165,6 +210,7 @@
     transform-style: preserve-3d;
 }
 
+.saturn::before,
 .jupiter,
 .neptune,
 .uranus,
@@ -187,15 +233,32 @@
     }
 }
 
+@keyframes ring {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
 
 @keyframes mercury {
     49% {
+
         z-index: 1;
     }
 
     50% {
+        box-shadow: inset -3px -3px 3px #000, -1px -1px 1px #ccc;
         left: 260px;
         z-index: -1;
+
     }
 
     99% {
@@ -215,6 +278,7 @@
     }
 
     50% {
+        box-shadow: inset -4px -4px 4px #000, -1px -1px 1px #ccc;
         left: 300px;
         z-index: -2;
     }
@@ -237,6 +301,7 @@
     }
 
     50% {
+        box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 330px;
         z-index: -3;
     }
@@ -259,6 +324,7 @@
     }
 
     50% {
+        box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 390px;
         z-index: -4;
     }
@@ -275,12 +341,15 @@
 }
 
 @keyframes jupiter {
+
+
     49% {
         z-index: 9;
     }
 
     50% {
-        left: 460px;
+        box-shadow: inset -13px -11px 9px #000, -1px -2px 1px #ccc;
+        left: 490px;
         z-index: -5;
     }
 
@@ -289,19 +358,25 @@
     }
 
     100% {
-        left: -250px;
+        left: -270px;
         z-index: 9;
     }
 
 }
 
 @keyframes saturn {
+    0% {
+        transform: rotate(40deg);
+    }
+
     49% {
         z-index: 10;
     }
 
     50% {
-        left: 495px;
+        box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+        transform: rotate(-40deg);
+        left: 515px;
         z-index: -6;
     }
 
@@ -310,8 +385,9 @@
     }
 
     100% {
-        left: -295px;
+        left: -320px;
         z-index: 10;
+        transform: rotate(40deg);
     }
 
 }
@@ -322,7 +398,8 @@
     }
 
     50% {
-        left: 530px;
+        box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
+        left: 560px;
         z-index: -7;
     }
 
@@ -331,7 +408,7 @@
     }
 
     100% {
-        left: -330px;
+        left: -360px;
         z-index: 11;
     }
 
@@ -343,6 +420,7 @@
     }
 
     50% {
+        box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 590px;
         z-index: -8;
     }
@@ -352,7 +430,7 @@
     }
 
     100% {
-        left: -370px;
+        left: -390px;
         z-index: 12;
     }
 
