@@ -30,10 +30,10 @@
     height: 13px;
     left: -65px;
     top: 45%;
-    transform: translateY(-60%);
+    transform: translateY(-60%) rotateZ(-28deg);
     animation: rotate 1s linear infinite,
         mercury 4.5s infinite ease-in-out;
-    position: relative;
+    position: absolute;
     z-index: 1;
 
 }
@@ -42,11 +42,11 @@
     background: url(../img/venux.jpg);
 
     box-shadow: inset 4px 0px 4px #000, 1px 0px 1px #ccc;
-    width: 13px;
-    height: 13px;
+    width: 18px;
+    height: 18px;
     left: -90px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotateZ(-20deg);
     animation: rotate 1s linear infinite,
         venus 7.5s infinite ease-in-out;
     position: absolute;
@@ -62,7 +62,7 @@
     height: 20px;
     left: -130px;
     top: 52%;
-    transform: translateY(-30%);
+    transform: translateY(-30%) rotateZ(-17deg);
     animation: rotate 1s linear infinite,
         earth 10s infinite ease-in-out;
     position: absolute;
@@ -91,12 +91,12 @@
 .mars {
     background: url(../img/mars.jpg);
     box-shadow: inset 4px 2px 8px #000, 1px 0px 1px #ccc;
-
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     left: -180px;
     top: 50%;
-    transform: translateY(-55%);
+    transform: translateY(-55%)rotateZ(-10deg);
+    ;
     animation: rotate 1s linear infinite,
         mars 13.5s infinite ease-in-out;
     position: absolute;
@@ -112,7 +112,7 @@
     height: 68px;
     left: -270px;
     top: 65%;
-    transform: translateY(-55%);
+    transform: translateY(-55%) rotateZ(-15deg);
     animation: rotate 14s linear infinite,
         jupiter 29.5s infinite ease-in-out;
     position: absolute;
@@ -178,7 +178,8 @@
     height: 24px;
     left: -360px;
     top: 35%;
-    transform: translateY(-55%);
+    transform: translateY(-55%) rotateZ(-28deg);
+    ;
     animation: rotate 14s linear infinite,
         uranus 49.5s infinite ease-in-out;
     position: absolute;
@@ -194,7 +195,8 @@
     height: 24px;
     left: -390px;
     top: 75%;
-    transform: translateY(-55%);
+    transform: translateY(-55%)rotateZ(-18deg);
+    ;
     animation: rotate 14s linear infinite,
         neptune 59.5s infinite ease-in-out;
     position: absolute;
@@ -240,37 +242,63 @@
 }
 
 @keyframes mercury {
+    20% {
+        width: 15px;
+        height: 15px;
+    }
+
     49% {
 
         z-index: 1;
     }
 
     50% {
+        width: 11px;
+        height: 11px;
         box-shadow: inset -3px -3px 3px #000, -1px -1px 1px #ccc;
         left: 260px;
         z-index: -1;
 
     }
 
+    70% {
+        width: 10px;
+        height: 10px;
+    }
+
     99% {
         z-index: -1;
     }
 
     100% {
+        width: 13px;
+        height: 13px;
         left: -65px;
         z-index: 1;
     }
 }
 
 @keyframes venus {
+    20% {
+        width: 20px;
+        height: 20px;
+    }
+
     49% {
         z-index: 2;
     }
 
     50% {
+        width: 16px;
+        height: 16px;
         box-shadow: inset -4px -4px 4px #000, -1px -1px 1px #ccc;
         left: 300px;
         z-index: -2;
+    }
+
+    70% {
+        width: 15px;
+        height: 15px;
     }
 
     99% {
@@ -278,23 +306,37 @@
     }
 
     100% {
+        width: 18px;
+        height: 18px;
         left: -90px;
         z-index: 2;
     }
 }
 
 @keyframes earth {
+
+    20% {
+        width: 22px;
+        height: 22px;
+    }
+
     49% {
 
         z-index: 7;
     }
 
     50% {
+        width: 18px;
+        height: 18px;
         box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 330px;
         z-index: -3;
     }
 
+    70% {
+        width: 17px;
+        height: 17px;
+    }
 
     99% {
         z-index: -3;
@@ -303,19 +345,34 @@
     100% {
         left: -130px;
         z-index: 7;
+        width: 20px;
+        height: 20px;
     }
 
 }
 
 @keyframes mars {
+    20% {
+        width: 18px;
+        height: 18px;
+
+    }
+
     49% {
         z-index: 8;
     }
 
     50% {
+        width: 15px;
+        height: 15px;
         box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 390px;
         z-index: -4;
+    }
+
+    70% {
+        width: 14px;
+        height: 14px;
     }
 
     99% {
@@ -323,6 +380,8 @@
     }
 
     100% {
+        width: 16px;
+        height: 16px;
         left: -180px;
         z-index: 8;
     }
@@ -330,6 +389,10 @@
 }
 
 @keyframes jupiter {
+    20% {
+        width: 75px;
+        height: 75px;
+    }
 
 
     49% {
@@ -337,16 +400,26 @@
     }
 
     50% {
+        width: 60px;
+        height: 60px;
         box-shadow: inset -13px -11px 9px #000, -1px -2px 1px #ccc;
         left: 490px;
         z-index: -5;
     }
+
+    70% {
+        width: 50px;
+        height: 50px;
+    }
+
 
     99% {
         z-index: -5;
     }
 
     100% {
+        width: 68px;
+        height: 68px;
         left: -270px;
         z-index: 9;
     }
@@ -358,15 +431,27 @@
         transform: rotate(40deg);
     }
 
+    20% {
+        width: 52px;
+        height: 52px;
+    }
+
     49% {
         z-index: 10;
     }
 
     50% {
+        width: 44px;
+        height: 44px;
         box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         transform: rotate(-40deg);
         left: 515px;
         z-index: -6;
+    }
+
+    70% {
+        width: 40px;
+        height: 40px;
     }
 
     99% {
@@ -374,6 +459,8 @@
     }
 
     100% {
+        height: 48px;
+        width: 48px;
         left: -320px;
         z-index: 10;
         transform: rotate(40deg);
@@ -382,14 +469,27 @@
 }
 
 @keyframes uranus {
+    20% {
+        width: 27px;
+        height: 27px;
+
+    }
+
     49% {
         z-index: 11;
     }
 
     50% {
+        width: 22px;
+        height: 22px;
         box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 560px;
         z-index: -7;
+    }
+
+    70% {
+        width: 20px;
+        height: 20px;
     }
 
     99% {
@@ -397,6 +497,8 @@
     }
 
     100% {
+        width: 24px;
+        height: 24px;
         left: -360px;
         z-index: 11;
     }
@@ -404,14 +506,27 @@
 }
 
 @keyframes neptune {
+    20% {
+        width: 28px;
+        height: 28px;
+
+    }
+
     49% {
         z-index: 12;
     }
 
     50% {
+        width: 22px;
+        height: 22px;
         box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
         left: 590px;
         z-index: -8;
+    }
+
+    70% {
+        width: 19px;
+        height: 19px;
     }
 
     99% {
@@ -419,6 +534,8 @@
     }
 
     100% {
+        width: 24px;
+        height: 24px;
         left: -390px;
         z-index: 12;
     }
