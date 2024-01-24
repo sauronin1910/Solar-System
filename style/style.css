@@ -551,9 +551,3 @@
         transform: perspective(1000px) rotateY(360deg) rotateX(0deg);
     }
 }
-
-@media (max-width: 991px) {
-    .stars {
-        overflow: auto;
-    }
-}
