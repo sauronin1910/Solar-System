@@ -1,6 +1,5 @@
 .stars {
     background: url(../img/stars.jpg) center repeat;
-    /* background-size: cover; */
     background-size: 91%;
     min-height: 100vh;
     display: flex;
@@ -10,6 +9,7 @@
     z-index: -100;
     animation: rotate 450s linear infinite;
     transform-style: preserve-3d;
+
 }
 
 .sun {
@@ -53,7 +53,6 @@
     z-index: 2;
 }
 
-
 .earth {
 
     background: url(../img/earth.jpg);
@@ -71,16 +70,12 @@
     transform-style: preserve-3d;
 }
 
-
-
-
 .moon {
     position: relative;
     transform-style: preserve-3d;
     animation: orbit 1s linear infinite, moon 10s linear infinite;
     top: 7px;
     left: 0;
-
 }
 
 .moon img {
@@ -143,9 +138,6 @@
     border-radius: 50%;
 
 }
-
-
-
 
 .saturn {
     background: url(../img/saturn.jpg);
@@ -247,7 +239,6 @@
     }
 }
 
-
 @keyframes mercury {
     49% {
 
@@ -269,7 +260,6 @@
         left: -65px;
         z-index: 1;
     }
-
 }
 
 @keyframes venus {
@@ -291,7 +281,6 @@
         left: -90px;
         z-index: 2;
     }
-
 }
 
 @keyframes earth {
@@ -433,12 +422,7 @@
         left: -390px;
         z-index: 12;
     }
-
 }
-
-
-
-
 
 @keyframes orbit {
     0% {
