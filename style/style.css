@@ -1,14 +1,14 @@
 .stars {
     background: url(../img/stars.jpg) center repeat;
     /* background-size: cover; */
-    background-size: 90%;
+    background-size: 91%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: -100;
-    animation: rotate 350s linear infinite;
+    animation: rotate 450s linear infinite;
     transform-style: preserve-3d;
 }
 
@@ -27,7 +27,7 @@
     box-shadow: inset -3px -3px 3px #000, -1px -1px 1px #ccc;
     width: 13px;
     height: 13px;
-    left: -45px;
+    left: -65px;
     top: 45%;
     transform: translateY(-60%);
     animation: rotate 1s linear infinite,
@@ -42,11 +42,11 @@
     box-shadow: inset -4px -4px 4px #000, -1px -1px 1px #ccc;
     width: 13px;
     height: 13px;
-    left: -60px;
+    left: -90px;
     top: 50%;
     transform: translateY(-50%);
     animation: rotate 1s linear infinite,
-        venus 6.5s infinite ease-in-out;
+        venus 7.5s infinite ease-in-out;
     position: absolute;
     z-index: 2;
 }
@@ -58,11 +58,11 @@
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 20px;
     height: 20px;
-    left: -80px;
+    left: -130px;
     top: 52%;
     transform: translateY(-30%);
     animation: rotate 1s linear infinite,
-        earth 9s infinite ease-in-out;
+        earth 10s infinite ease-in-out;
     position: absolute;
     z-index: 7;
     transform-style: preserve-3d;
@@ -95,11 +95,11 @@
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 18px;
     height: 18px;
-    left: -100px;
+    left: -180px;
     top: 50%;
     transform: translateY(-55%);
     animation: rotate 1s linear infinite,
-        mars 12.5s infinite ease-in-out;
+        mars 13.5s infinite ease-in-out;
     position: absolute;
     z-index: 8;
     transform-style: preserve-3d;
@@ -110,11 +110,11 @@
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 68px;
     height: 68px;
-    left: -150px;
+    left: -250px;
     top: 65%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
-        jupiter 25.5s infinite ease-in-out;
+        jupiter 29.5s infinite ease-in-out;
     position: absolute;
     z-index: 9;
     transform-style: preserve-3d;
@@ -125,11 +125,11 @@
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 48px;
     height: 48px;
-    left: -175px;
+    left: -295px;
     top: 45%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
-        saturn 35.5s infinite ease-in-out;
+        saturn 39.5s infinite ease-in-out;
     position: absolute;
     z-index: 10;
     transform-style: preserve-3d;
@@ -140,11 +140,11 @@
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 24px;
     height: 24px;
-    left: -200px;
+    left: -330px;
     top: 35%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
-        uranus 45.5s infinite ease-in-out;
+        uranus 49.5s infinite ease-in-out;
     position: absolute;
     z-index: 10;
     transform-style: preserve-3d;
@@ -155,11 +155,11 @@
     box-shadow: inset -8px -8px 8px #000, -1px -1px 1px #ccc;
     width: 24px;
     height: 24px;
-    left: -250px;
+    left: -370px;
     top: 75%;
     transform: translateY(-55%);
     animation: rotate 14s linear infinite,
-        neptune 55.5s infinite ease-in-out;
+        neptune 59.5s infinite ease-in-out;
     position: absolute;
     z-index: 10;
     transform-style: preserve-3d;
@@ -181,19 +181,11 @@
 }
 
 
-
-
-
 @keyframes rotate {
     to {
         background-position: -200% 0;
     }
 }
-
-
-
-
-
 
 
 @keyframes mercury {
@@ -202,7 +194,7 @@
     }
 
     50% {
-        left: 210px;
+        left: 260px;
         z-index: -1;
     }
 
@@ -211,7 +203,7 @@
     }
 
     100% {
-        left: -45px;
+        left: -65px;
         z-index: 1;
     }
 
@@ -223,7 +215,7 @@
     }
 
     50% {
-        left: 240px;
+        left: 300px;
         z-index: -2;
     }
 
@@ -232,7 +224,7 @@
     }
 
     100% {
-        left: -60px;
+        left: -90px;
         z-index: 2;
     }
 
@@ -245,7 +237,7 @@
     }
 
     50% {
-        left: 280px;
+        left: 330px;
         z-index: -3;
     }
 
@@ -255,7 +247,7 @@
     }
 
     100% {
-        left: -80px;
+        left: -130px;
         z-index: 7;
     }
 
@@ -267,7 +259,7 @@
     }
 
     50% {
-        left: 300px;
+        left: 390px;
         z-index: -4;
     }
 
@@ -276,7 +268,7 @@
     }
 
     100% {
-        left: -100px;
+        left: -180px;
         z-index: 8;
     }
 
@@ -288,7 +280,7 @@
     }
 
     50% {
-        left: 340px;
+        left: 460px;
         z-index: -5;
     }
 
@@ -297,7 +289,7 @@
     }
 
     100% {
-        left: -150px;
+        left: -250px;
         z-index: 9;
     }
 
@@ -309,7 +301,7 @@
     }
 
     50% {
-        left: 350px;
+        left: 495px;
         z-index: -6;
     }
 
@@ -318,7 +310,7 @@
     }
 
     100% {
-        left: -175px;
+        left: -295px;
         z-index: 10;
     }
 
@@ -330,7 +322,7 @@
     }
 
     50% {
-        left: 380px;
+        left: 530px;
         z-index: -7;
     }
 
@@ -339,7 +331,7 @@
     }
 
     100% {
-        left: -200px;
+        left: -330px;
         z-index: 11;
     }
 
@@ -351,7 +343,7 @@
     }
 
     50% {
-        left: 400px;
+        left: 590px;
         z-index: -8;
     }
 
@@ -360,7 +352,7 @@
     }
 
     100% {
-        left: -250px;
+        left: -370px;
         z-index: 12;
     }
 
